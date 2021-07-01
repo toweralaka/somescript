@@ -1,0 +1,28 @@
+/* main {
+  width: 100%;
+  background-color: red;
+} */
+#quote-box{
+    width: 50%;
+    background-color: #C8A2C8;
+    height: 50%;
+    margin: auto;
+    padding: 2%;
+  }
+  #text {
+    height:50px;
+    width:100%;
+  }
+  /* button{
+    width:50%;
+  } */
+  a{
+    text-decoration: None;
+  /*   text-align: right;
+    width:50%; */
+  }
+  #card-foot {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+  }
