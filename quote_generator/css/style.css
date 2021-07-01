@@ -1,28 +1,40 @@
-/* main {
-  width: 100%;
-  background-color: red;
-} */
+body{
+  background-color: #d8d4d4;
+}
+
 #quote-box{
     width: 50%;
-    background-color: #C8A2C8;
+    background-color: #cab0ca;
     height: 50%;
-    margin: auto;
+    margin: 10% auto;
     padding: 2%;
+    box-shadow: 5px 10px #888888;
   }
   #text {
     height:50px;
     width:100%;
+    font-size: large;
+    font-weight:bold;
+    font-style: oblique;
   }
-  /* button{
-    width:50%;
-  } */
+  #author-p{
+    text-align: right;
+  }
+  button{
+    background-color:#f7cac9;
+    color: #0a58ca;
+    border-radius:4px;
+    border:2px solid #f7cac9;
+    padding:2%;
+    box-shadow: 2px 5px #cf5f5d;
+  }
   a{
     text-decoration: None;
-  /*   text-align: right;
-    width:50%; */
+    color: #0a58ca;
   }
   #card-foot {
     display: flex;
     flex-direction: row;
-    align-items: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
   }

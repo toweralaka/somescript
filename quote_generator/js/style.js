@@ -25,10 +25,22 @@ INSTRUCTIONS:
 // PLEASE NOTE: Adding global style rules using the * selector, or by adding rules to body {..} or html {..}, or to all elements within body or html, i.e. h1 {..}, has the potential to pollute the test suite's CSS. Try adding: * { color: red }, for a quick example!
 
 // Once you have read the above messages, you can delete all comments. 
-fetch("https://type.fit/api/quotes")
+let theQuotes = JSON.parse(localStorage.getItem("quotes"));
+if(theQuotes == null) {
+  fetch("https://type.fit/api/quotes")
   .then(function(response) {
     return response.json();
   })
   .then(function(data) {
-    console.log(data.slice(0,50));
+    theQuotes = data.slice(0,50)
+    localStorage.setItem("quotes", JSON.stringify(theQuotes));
   });
+}
+let newQuote = document.getElementById('new-quote');
+newQuote.addEventListener('click', getNewQuote);
+function getNewQuote() {
+  let selectedQuote = theQuotes[Math.floor(Math.random() * theQuotes.length)]
+  document.getElementById('text').innerHTML = selectedQuote['text']
+  document.getElementById('author').innerHTML = selectedQuote['author']
+}
+getNewQuote()
