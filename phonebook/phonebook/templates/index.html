@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+        margin-right: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <h1>Enter Name Of Contact</h1>
+      <form action="/getcontact" method="post">
+        <p>
+          Name:
+          <input type="text" name="name" id="" />
+        </p>
+
+        <button>Find</button>
+      </form>
+      <br />
+      {% if missing_name %}
+      {{ missing_name }} Not Found. Do you want to create contact?
+      <a href="#">YES</a> &nbsp;<a href="#">NO</a>
+      {% endif %}
+      <br />
+      <a href="/allcontact">All Contacts</a>
+    </div>
+
+  </body>
+</html>
